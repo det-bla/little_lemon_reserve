@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 2rem;
+  font-weight: bold;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Main {
+  display: grid;
+  grid-template-areas:  "nav"
+                        "header"
+                        "main-lemon"
+                        "footer";
+
+  grid-template-rows:  .25fr .25fr .25fr .25fr;
+  grid-template-columns: repeat(auto-fit , minmax(1000px, 1fr));
+}
+
+/* NAVIGATION SECTION*/
+
+nav {
+  grid-area: 'nav';
+  display: flex;
+  margin: 2rem auto;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, white, rgb(248, 252, 252));
+  border-bottom: solid thin grey;
+  /*border-right: solid thin grey;*/ 
+  width: 90%;
+}
+
+nav ul {
+  margin: 0;
+  
+}
+
+nav li {
+  display: inline-block;
+  padding: 0;
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  font-size: 1rem;
+  text-decoration: none;
+} 
+
+nav li:hover{
+  color: green;
+
+}
+
+/* HEADER SECTION*/
+
+header {
+  grid-area: 'header';
+  display: flex;
+  padding-bottom: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(190, 220, 190);
+  width: 90%;
+  margin: auto;
+}
+
+#head {
+  width: 30rem;
+  text-align: left;  
+}
+
+button#res {
+  border-radius: 5%;
+  border: none;
+  font-size: 1rem;
+  height: 3rem;
+  padding: .5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: gold;
+  margin-top: 1rem;
+}
+
+button#res:hover {
+  background-color: rgb(232, 198, 5);;
+}
+
+#head h4 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+}
+
+#head h6 {
+  padding-top: 0;
+  margin-bottom: 2rem;
+  margin-top: 0;
+
+}
+
+header img {
+  border-radius: 10%;
+  height: 20rem;
+  width: 16rem;
+  margin-top: 4rem;
+  
+}
+ 
+/* MAIN SECTION*/
+
+main {
+  grid-area: 'main-lemon';
+  display: grid;
+  grid-template-areas:    "upper"
+                          "lower"; 
+
+  grid-template-rows: .25fr .75fr;                       
+  background-image: linear-gradient(to bottom, white, rgb(247, 229, 212));
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 2rem; 
+  padding-bottom: 1rem;
+}
+
+main section {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+main section article {
+  display: flex;
+  flex-direction: column;
+  flex: .3;
+  align-items: left;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main section article h4{
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+main section article p{
+  padding-left: 1rem;
+}
+
+main section article img {
+  border-radius: 3% 3% 0 0;
+  width: 100%;
+}
+
+main button {
+  text-align: center;
+  font-size: 1rem;
+  height: 3rem;
+}
+
+button#main {
+  border-radius: 5%;
+  padding: .5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+  background-color: gold;
+}
+
+button#main:hover {
+  background-color: rgb(232, 198, 5);
+}
+
+main section#top {
+  display: flex;
+  grid-area: 'upper';
+  gap: 30rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+main section#bot {
+  grid-area: 'lower';
+  align-items: center;
+  gap: 1rem; 
+  width: 100%;
+}
+
+.card {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  border-radius: 3%;
+}
+
+.card:hover {
+  box-shadow: 0 5px 20px rgb(175, 177, 173);
+}
+
+footer {
+  display: flex;
+  margin: 0 auto;
+  grid-area: "footer";
+  background-color: rgb(73,94,87);
+  color: white;
+  width: 90%;
+  justify-content: space-around;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.footer div {
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: gold;
+}
+
+footer section ul {
+  margin: 0;
+}
+
+footer section li {
+  display: block;
+  padding-bottom: 1rem;
+  color: white;
+} 
+
+footer section a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+} 
+
+footer section a:hover {
+  color: rgb(251,218,187);
+}
+
+fieldset {
+  padding-left: 10%;
+  border: gray medium solid;
+}
+
+
+/*ABOUT*/
+
+#about {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+#about div p:first-letter {
+  color: gold;
+  font-size: 6rem;
+  font-family: times;
+
+}
+
+
+
+#location {
+  display: block;
+  margin: auto;
+  justify-self: center;
+
+}
+
+/*MENU*/
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  justify-self: space-around;
+  width: 90%;
+
+}
+
+#item {
+  display: flex;
+  padding: 2rem;
+}
+
+#item div {
+  padding-left: 1rem;
+}
+
+#item div p {
+  padding: 1rem;
+}
+
+#item div p:last-child {
+  font-size: 1.25rem;
+  color: rgb(73,94,87);
+}
+
+
+/* RESERVATION BOOKING FORM*/
+#booking-form form {
+  background-image: url(/src/assets/grilled.png); 
+  background-repeat: no-repeat;
+  background-position: 700px center;
+  background-size: 35%;
+}
+
+form {
+  margin: auto;
+  width: 90%;
+}
+
+form div {
+  padding: 1rem;
+}
+
+form label {
+  font-size: 1.5rem;
+}
+
+form input {
+  font-size: 1rem;
+  margin-left: 1rem;
+  height: 2rem;
+  width: 6rem;
+  text-align: center;
+  background-color: rgb(234, 233, 233);
+  border: none;
+}
+
+form select {
+  height: 2rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  background-color: rgb(234, 233, 233);
+  border: none;
+}
+
+form button {
+  width: 8rem;
+  height: 2rem;
+  font-size: 1rem;
+  padding: .1rem;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+  color: rgb(73,94,87);
+  background-color: gold;
+  border-radius: 3%;
+  border: none;
+}
+
+form button:hover {
+  background-color: rgb(232, 198, 5);
+}
+
+form button:active {
+  font-weight: bold;
+  padding: .1rem;
+  color: gold;
+  background-color: white;
+  border: solid gold medium;
+}
+
+/* CONFIRMATION BOOKING FORM*/
+
+.confirm p {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+form .confirm {
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  background-image: url(/src/assets/lemon_stamp.png); 
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: 900px 90px;
+}
+
+form .confirm span {
+  color: green;
+  font-size: 1.25rem;
+  padding-left: .5rem;
+}
+
+button #confirm {
+  width: 6rem;
+  height: 1rem;
+  padding: 1rem;
+  
+}
+
+#conf-num {
+  position: absolute;
+  color: green;
+  top: 220px;
+  left: 875px;
+}
+
+.thankyou {
+  text-align: center;
+  margin: 10rem auto;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255),rgb(237, 251, 237));
+  width: 80%;
+}
+
+.thankyou h3 {
+  padding: 2rem;
+}
